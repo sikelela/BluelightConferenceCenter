@@ -146,12 +146,26 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RoomTypesController.cs" />
+    <Compile Include="Controllers\VenuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807050957563_InitialCreate.cs" />
+    <Compile Include="Migrations\201807050957563_InitialCreate.Designer.cs">
+      <DependentUpon>201807050957563_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051015426_DataAnnotations.cs" />
+    <Compile Include="Migrations\201807051015426_DataAnnotations.Designer.cs">
+      <DependentUpon>201807051015426_DataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051035327_DataAnnotations1.cs" />
+    <Compile Include="Migrations\201807051035327_DataAnnotations1.Designer.cs">
+      <DependentUpon>201807051035327_DataAnnotations1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Venue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -193,13 +207,19 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Welcome.cshtml" />
+    <Content Include="Views\Venues\Create.cshtml" />
+    <Content Include="Views\Venues\Delete.cshtml" />
+    <Content Include="Views\Venues\Details.cshtml" />
+    <Content Include="Views\Venues\Edit.cshtml" />
+    <Content Include="Views\Venues\Index.cshtml" />
+    <Content Include="Views\RoomTypes\Create.cshtml" />
+    <Content Include="Views\RoomTypes\Delete.cshtml" />
+    <Content Include="Views\RoomTypes\Details.cshtml" />
+    <Content Include="Views\RoomTypes\Edit.cshtml" />
+    <Content Include="Views\RoomTypes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Bookings\" />
-    <Folder Include="Views\Booking\" />
-    <Folder Include="Views\Gallery\" />
-    <Folder Include="Views\Meetings\" />
     <Folder Include="Views\Welcome\" />
   </ItemGroup>
   <ItemGroup>
@@ -216,6 +236,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201807050957563_InitialCreate.resx">
+      <DependentUpon>201807050957563_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051015426_DataAnnotations.resx">
+      <DependentUpon>201807051015426_DataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051035327_DataAnnotations1.resx">
+      <DependentUpon>201807051035327_DataAnnotations1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

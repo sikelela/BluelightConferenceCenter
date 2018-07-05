@@ -1,0 +1,66 @@
+﻿@model BlueLghtConferenceCenter.Models.Venue
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Venue</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VenueName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VenueName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomTypeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomTypeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CapacityStanding)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CapacityStanding)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CapacitySeated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CapacitySeated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seats)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seats)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Archive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Archive)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VenueID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
