@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 
 namespace BlueLghtConferenceCenter.Models
 {
@@ -13,8 +14,8 @@ namespace BlueLghtConferenceCenter.Models
     public DateTime Archive { get; set; }
   }
 
-  //public class MovieDBContext : DbContext
-  //{
-  //  public DbSet<Venue> Venues { get; set; }
-  //}
+  public class MovieDBContext : DbContext
+  {
+    public DbSet<Venue> Venues { get; set; }
+  }
 }
