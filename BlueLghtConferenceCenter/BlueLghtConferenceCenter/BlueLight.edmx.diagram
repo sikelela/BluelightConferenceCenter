@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ced276be56ed46b896caf01a620d5aa0" Name="Diagram1">
+        <EntityTypeShape EntityType="BlueLightModel.ConferenceRoom" Width="5" PointX="6.375" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlueLightModel.RoomType" Width="1.5" PointX="2" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="BlueLightModel.FK_ConferenceRooms_RoomTypes" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

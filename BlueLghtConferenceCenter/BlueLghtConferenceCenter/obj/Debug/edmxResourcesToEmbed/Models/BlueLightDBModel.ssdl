@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CarpeDiemConferenceCenter.Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ConferenceRooms">
+    <Key>
+      <PropertyRef Name="ConferenceRoomID" />
+    </Key>
+    <Property Name="ConferenceRoomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ConferenceRoomCode" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ConferenceRoomName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" Nullable="false" />
+    <Property Name="RoomTypeID" Type="int" Nullable="false" />
+    <Property Name="Capacity" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RoomTypes">
+    <Key>
+      <PropertyRef Name="RoomTypeID" />
+    </Key>
+    <Property Name="RoomTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoomTypeName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ConferenceRooms_RoomTypes">
+    <End Role="RoomTypes" Type="Self.RoomTypes" Multiplicity="1" />
+    <End Role="ConferenceRooms" Type="Self.ConferenceRooms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoomTypes">
+        <PropertyRef Name="RoomTypeID" />
+      </Principal>
+      <Dependent Role="ConferenceRooms">
+        <PropertyRef Name="RoomTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CarpeDiemConferenceCenterModelsStoreContainer">
+    <EntitySet Name="ConferenceRooms" EntityType="Self.ConferenceRooms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoomTypes" EntityType="Self.RoomTypes" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ConferenceRooms_RoomTypes" Association="Self.FK_ConferenceRooms_RoomTypes">
+      <End Role="RoomTypes" EntitySet="RoomTypes" />
+      <End Role="ConferenceRooms" EntitySet="ConferenceRooms" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

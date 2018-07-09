@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
-namespace BlueLghtConferenceCenter
+namespace BluelightConferenceCenter
 {
   public class BundleConfig
   {
@@ -13,6 +12,11 @@ namespace BlueLghtConferenceCenter
 
       bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                   "~/Scripts/jquery.validate*"));
+
+      bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
+            "~/Scripts/knockout-{version}.js",
+            "~/Scripts/knockout-{version}.debug.js",
+            "~/Scripts/knockout.*"));
 
       // Use the development version of Modernizr to develop with and learn from. Then, when you're
       // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
@@ -26,6 +30,10 @@ namespace BlueLghtConferenceCenter
       bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css",
                 "~/Content/site.css"));
+
+      //You can also use IncludeDirectory method of bundle class to add all the files under particular directory as shown below.
+      //bundles.Add(new ScriptBundle("~/bundles/scripts").IncludeDirectory("~/Scripts/","*.js",true));
+
     }
   }
 }

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CarpeDiemConferenceCenterModelsStoreContainer" CdmEntityContainer="CarpeDiemConferenceCentreEntities">
+    <EntitySetMapping Name="ConferenceRooms">
+      <EntityTypeMapping TypeName="CarpeDiemConferenceCenter.Models.ConferenceRoom">
+        <MappingFragment StoreEntitySet="ConferenceRooms">
+          <ScalarProperty Name="ConferenceRoomID" ColumnName="ConferenceRoomID" />
+          <ScalarProperty Name="ConferenceRoomCode" ColumnName="ConferenceRoomCode" />
+          <ScalarProperty Name="ConferenceRoomName" ColumnName="ConferenceRoomName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="RoomTypeID" ColumnName="RoomTypeID" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomTypes">
+      <EntityTypeMapping TypeName="CarpeDiemConferenceCenter.Models.RoomType">
+        <MappingFragment StoreEntitySet="RoomTypes">
+          <ScalarProperty Name="RoomTypeID" ColumnName="RoomTypeID" />
+          <ScalarProperty Name="RoomTypeName" ColumnName="RoomTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

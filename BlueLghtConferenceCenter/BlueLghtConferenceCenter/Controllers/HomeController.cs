@@ -1,30 +1,25 @@
 ﻿using System.Web.Mvc;
 
-namespace BlueLghtConferenceCenter.Controllers
+namespace BluelightConferenceCenter.Controllers
 {
-  public class HomeController : System.Web.Mvc.Controller
+  public class HomeController : Controller
   {
-
     public ActionResult Index()
     {
       return View();
     }
 
-    public ActionResult Welcome()
-    {
-      ViewBag.Message = "Welcome to the Blue Light Conference Centre";
-      return View();
-    }
-
     public ActionResult About()
     {
-      ViewBag.Message = "Your application description page.";
+      ViewBag.Message = "Blue Light Conference Center provides a hosting venue fro various events.";
+
       return View();
     }
 
     public ActionResult Contact()
     {
       ViewBag.Message = "Your contact page.";
+
       return View();
     }
   }

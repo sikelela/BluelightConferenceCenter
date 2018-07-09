@@ -1,0 +1,54 @@
+﻿<title>Conference Rooms</title>
+<h2>Conference Rooms</h2>
+
+<p>
+  <button class="btn btn-primary" id="create">Create</button>
+</p>
+<table class="table">
+  <tr>
+    <th>
+      ConferenceRoomCode
+    </th>
+    <th>
+      Description
+    </th>
+    <th>
+     RoomTypeID
+    </th>
+    <th>
+     Capacity
+    </th>
+    <th></th>
+  </tr>
+  <tbody data-bind="foreach: conferenceRoomList">
+    <tr data-bind="template: { name: Mode, data: $data }"></tr>
+  </tbody>
+</table>
+
+<script type="text/html" id="display">
+  <td data-bind="text: ConferenceRoomCode"></td>
+  <td data-bind="text: Description"></td>
+  <td data-bind="text: RoomTypeID"></td>
+  <td data-bind="text: Capacity"></td>
+  <td>
+    <button class="btn btn-success kout-edit">Edit</button>
+    <button class="btn btn-danger kout-delete">Delete</button>
+  </td>
+</script>
+
+<script type="text/html" id="edit">
+  <td><input type="text" data-bind="value: ConferenceRoomCode" /></td>
+  <td><input type="text" data-bind="value: Description" /></td>
+  <td><input type="text" data-bind="value: RoomTypeID" /></td>
+  <td><input type="text" data-bind="value: Capacity" /></td>
+  <td>
+    <button class="btn btn-success kout-update">Update</button>
+    <button class="btn btn-danger kout-cancel">Cancel</button>
+  </td>
+</script>
+
+@section Scripts{
+  @Scripts.Render("~/bundles/knockout")
+}
+
+

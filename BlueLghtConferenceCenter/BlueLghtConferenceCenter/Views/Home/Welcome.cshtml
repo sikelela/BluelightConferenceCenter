@@ -1,7 +1,30 @@
 ﻿@{
   ViewBag.Title = "Welome";
 }
+
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
 <p>Use this area to provide additional information.</p>
+
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAwRIyN2qhI3e3Mdlpg24JyWGArtNRGIkA",
+    authDomain: "bluelight-c952e.firebaseapp.com",
+    databaseURL: "https://bluelight-c952e.firebaseio.com",
+    projectId: "bluelight-c952e",
+    storageBucket: "bluelight-c952e.appspot.com",
+    messagingSenderId: "498361042921"
+  };
+  firebase.initializeApp(config);
+  const messaging = firebase.messaging();
+  messaging.requestPermission()
+    .then(function () {
+      console.log('Have Permisiion');
+      return messaging.getToken();
+    }).catch(function (err) {
+      console.log('Error Occured');
+    })
+</script>
