@@ -31,6 +31,15 @@ namespace BluelightConferenceCenter
                 "~/Content/bootstrap.css",
                 "~/Content/site.css"));
 
+
+      bundles.Add(new StyleBundle("~/Styles/css").Include(
+                "~/Styles/bootstrap.min.css",
+                "~/Styles/jquery-ui-1.8.19.custom.css",
+                "~/Styles/welcome.css"));
+
+
+      bundles.Add(new StyleBundle("~/Scripts/js").Include(
+                "~/Scripts/jquery-1.10.2.min.js"));
       //You can also use IncludeDirectory method of bundle class to add all the files under particular directory as shown below.
       //bundles.Add(new ScriptBundle("~/bundles/scripts").IncludeDirectory("~/Scripts/","*.js",true));
 

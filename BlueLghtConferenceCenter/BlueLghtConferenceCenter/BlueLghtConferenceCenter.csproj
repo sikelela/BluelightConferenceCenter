@@ -150,6 +150,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RoomTypesController.cs" />
     <Compile Include="Controllers\VenuesController.cs" />
+    <Compile Include="Controllers\WelcomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -177,6 +178,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\public-domain-images-free-stock-photos-high-quality-resolution-downloads-unsplash0067-1000x666.jpg" />
+    <Content Include="images\tumblr_n4vbj2Vv8h1st5lhmo1_1280.jpg" />
+    <Content Include="images\unsplash-04.jpg" />
+    <Content Include="images\unsplash-contemplative.jpg" />
+    <Content Include="images\unsplash-love-yourself-article-e1397699812178.jpg" />
+    <Content Include="images\unsplash-mts.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -193,6 +200,21 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\clusterize.css" />
+    <Content Include="Styles\dashboard.css" />
+    <Content Include="Styles\fullcalendar.css" />
+    <Content Include="Styles\j.css" />
+    <Content Include="Styles\jquery-ui-1.8.19.custom.css" />
+    <Content Include="Styles\myjquery1.css" />
+    <Content Include="Styles\opensans.css" />
+    <Content Include="Styles\raleway.css" />
+    <Content Include="Styles\Site-1.0.min.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Styles\SiteVersion1.css" />
+    <Content Include="Styles\socialFeed.css" />
+    <Content Include="Styles\spectrum.css" />
+    <Content Include="Styles\welcome.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -207,7 +229,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Welcome.cshtml" />
+    <Content Include="Views\Welcome\Welcome.cshtml" />
     <Content Include="Views\Venues\Create.cshtml" />
     <Content Include="Views\Venues\Delete.cshtml" />
     <Content Include="Views\Venues\Details.cshtml" />
@@ -221,7 +243,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Welcome\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
