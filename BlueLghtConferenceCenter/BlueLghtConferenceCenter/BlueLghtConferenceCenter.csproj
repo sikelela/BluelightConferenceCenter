@@ -178,6 +178,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\blue-light-stripesparticles.png" />
+    <Content Include="images\images.jpg" />
     <Content Include="images\public-domain-images-free-stock-photos-high-quality-resolution-downloads-unsplash0067-1000x666.jpg" />
     <Content Include="images\tumblr_n4vbj2Vv8h1st5lhmo1_1280.jpg" />
     <Content Include="images\unsplash-04.jpg" />
